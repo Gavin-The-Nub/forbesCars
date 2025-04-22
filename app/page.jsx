@@ -29,7 +29,7 @@ export default function Home() {
                 className="rounded-full"
               />
             </div>
-            <h2 className="text-3xl font-bold mb-4 text-secondary">
+            <h2 className="text-3xl font-bold mb-4 text-foreground">
               Welcome to Forbes Capital Cars
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
@@ -42,19 +42,19 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-8 mb-8">
               <div className="flex items-center gap-2">
                 <Check className="text-primary" />
-                <span className="text-secondary">Quality Vehicles</span>
+                <span className="text-foreground">Quality Vehicles</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="text-primary" />
-                <span className="text-secondary">Customer Satisfaction</span>
+                <span className="text-foreground">Customer Satisfaction</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="text-primary" />
-                <span className="text-secondary">Excellent Aftersales</span>
+                <span className="text-foreground">Excellent Aftersales</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="text-primary" />
-                <span className="text-secondary">Negotiable Prices</span>
+                <span className="text-foreground">Negotiable Prices</span>
               </div>
             </div>
             <div className="flex justify-center gap-4">
@@ -64,7 +64,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 asChild
-                className="border-silver-400 text-secondary hover:bg-accent"
+                className="border-input text-foreground hover:bg-accent"
               >
                 <Link href="/contact">Contact Us</Link>
               </Button>
@@ -77,12 +77,12 @@ export default function Home() {
       <section id="inventory" className="py-16 bg-accent">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-2 text-secondary">
+            <h2 className="text-3xl font-bold mb-2 text-foreground">
               Featured Vehicles
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our selection of premium vehicles available for purchase.
-              All prices are negotiable.
+              Looking for a new car⁉️ Explore our selection of premium vehicles
+              available for April 2025. All prices are negotiable.
             </p>
           </div>
 
@@ -91,8 +91,8 @@ export default function Home() {
             <div className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-border">
               <div className="relative h-56">
                 <Image
-                  src="/c1.jpg"
-                  alt="Nissan GTR Premium"
+                  src="/audi-r8.png"
+                  alt="Audi R8 V8"
                   fill
                   className="object-cover"
                 />
@@ -101,12 +101,12 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-lg text-secondary">
-                  Nissan GTR Premium
+                <h3 className="font-bold text-lg text-foreground">
+                  Audi R8 V8
                 </h3>
-                <p className="text-muted-foreground text-sm">2018 • White</p>
-                <p className="text-xl font-bold mt-2 mb-3 text-secondary">
-                  ₱8,580,000
+                <p className="text-muted-foreground text-sm">2014 • White</p>
+                <p className="text-xl font-bold mt-2 mb-3 text-foreground">
+                  ₱7,500,000
                 </p>
                 <Button
                   size="sm"
@@ -121,8 +121,8 @@ export default function Home() {
             <div className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-border">
               <div className="relative h-56">
                 <Image
-                  src="/c2.jpg"
-                  alt="McLaren 570s"
+                  src="/land-cruiser-200.png"
+                  alt="Land Cruiser 200"
                   fill
                   className="object-cover"
                 />
@@ -131,14 +131,12 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-lg text-secondary">
-                  McLaren 570s
+                <h3 className="font-bold text-lg text-foreground">
+                  Land Cruiser 200
                 </h3>
-                <p className="text-muted-foreground text-sm">
-                  2020-21 • Orange
-                </p>
-                <p className="text-xl font-bold mt-2 mb-3 text-secondary">
-                  ₱17,800,000
+                <p className="text-muted-foreground text-sm">2007 • Beige</p>
+                <p className="text-xl font-bold mt-2 mb-3 text-foreground">
+                  ₱3,600,000
                 </p>
                 <Button
                   size="sm"
@@ -153,8 +151,8 @@ export default function Home() {
             <div className="bg-card rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-border">
               <div className="relative h-56">
                 <Image
-                  src="/c3.jpg"
-                  alt="Audi R8 v10"
+                  src="/mustang-gt500.png"
+                  alt="Mustang GT 500"
                   fill
                   className="object-cover"
                 />
@@ -163,12 +161,12 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-4">
-                <h3 className="font-bold text-lg text-secondary">
-                  Audi R8 v10
+                <h3 className="font-bold text-lg text-foreground">
+                  Mustang GT 500
                 </h3>
-                <p className="text-muted-foreground text-sm">2018 • Red</p>
-                <p className="text-xl font-bold mt-2 mb-3 text-secondary">
-                  ₱11,800,000
+                <p className="text-muted-foreground text-sm">2013 • Red</p>
+                <p className="text-xl font-bold mt-2 mb-3 text-foreground">
+                  ₱3,470,000
                 </p>
                 <Button
                   size="sm"
@@ -193,13 +191,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-black text-secondary">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
               Ready to Find Your Dream Car?
             </h2>
-            <p className="text-lg mb-8 text-muted-foreground">
+            <p className="text-lg mb-8 text-gray-300">
               Contact us today to schedule a viewing or inquire about any of our
               available vehicles. All prices are negotiable and we offer
               financing options.
@@ -215,7 +213,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-silver-400 text-secondary hover:bg-accent/50"
+                className="border-gray-400 text-white hover:bg-white/10"
                 asChild
               >
                 <Link href="/inventory">Browse Inventory</Link>
@@ -232,14 +230,14 @@ export default function Home() {
             <div className="flex items-center gap-4">
               <PhoneCall className="w-10 h-10 text-primary" />
               <div>
-                <h3 className="font-semibold text-secondary">Call Us</h3>
+                <h3 className="font-semibold text-foreground">Call Us</h3>
                 <p className="text-muted-foreground">0915 615 3040</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <Mail className="w-10 h-10 text-primary" />
               <div>
-                <h3 className="font-semibold text-secondary">Email Us</h3>
+                <h3 className="font-semibold text-foreground">Email Us</h3>
                 <p className="text-muted-foreground">
                   info@forbescapitalcars.com
                 </p>
@@ -248,7 +246,7 @@ export default function Home() {
             <div className="flex items-center gap-4">
               <MapPin className="w-10 h-10 text-primary" />
               <div>
-                <h3 className="font-semibold text-secondary">Visit Us</h3>
+                <h3 className="font-semibold text-foreground">Visit Us</h3>
                 <p className="text-muted-foreground">
                   Flamingo, Manila, Philippines
                 </p>

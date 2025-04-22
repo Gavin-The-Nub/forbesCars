@@ -23,7 +23,7 @@ const Button = forwardRef(
 
           // Variants
           variant === "default" &&
-            "bg-primary text-primary-foreground hover:bg-primary/90",
+            "bg-gradient-to-r from-blue-500 to-purple-600 text-white",
           variant === "destructive" &&
             "bg-destructive text-destructive-foreground hover:bg-destructive/90",
           variant === "outline" &&

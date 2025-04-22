@@ -242,7 +242,7 @@ export default function LocationPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="relative h-48 rounded-lg overflow-hidden border border-border">
                     <Image
-                      src="/placeholder.svg?height=400&width=600"
+                      src="/ss1.jpg"
                       alt="Dealership exterior"
                       fill
                       className="object-cover"
@@ -250,7 +250,7 @@ export default function LocationPage() {
                   </div>
                   <div className="relative h-48 rounded-lg overflow-hidden border border-border">
                     <Image
-                      src="/placeholder.svg?height=400&width=600"
+                      src="/ss2.jpg"
                       alt="Showroom interior"
                       fill
                       className="object-cover"
@@ -258,7 +258,7 @@ export default function LocationPage() {
                   </div>
                   <div className="relative h-48 rounded-lg overflow-hidden border border-border">
                     <Image
-                      src="/placeholder.svg?height=400&width=600"
+                      src="/ss3.jpg"
                       alt="Vehicle display"
                       fill
                       className="object-cover"

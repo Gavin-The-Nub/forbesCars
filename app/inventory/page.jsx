@@ -10,159 +10,138 @@ import Image from "next/image";
 import Link from "next/link";
 import { Heart, PhoneCall, X } from "lucide-react";
 
-// Car inventory data
+// Car inventory data - Updated for April 2025 with actual images
 const cars = [
   {
     id: 1,
-    name: "Nissan GTR Premium",
-    year: "2018",
-    price: 8580000,
-    color: "White",
-    image: "/u1.jpg",
+    name: "Land Cruiser 200",
+    year: "2007",
+    price: 3600000,
+    color: "Beige",
+    image: "/land-cruiser-200.png",
     status: "available",
-    type: "sports",
+    type: "suv",
   },
   {
     id: 2,
-    name: "McLaren 570s",
-    year: "2020-21",
-    price: 17800000,
-    color: "Orange",
-    image: "/c2.jpg",
+    name: "Audi R8 V8",
+    year: "2014",
+    price: 7500000,
+    color: "White",
+    image: "/audi-r8.png",
     status: "available",
     type: "luxury",
   },
   {
     id: 3,
-    name: "Honda Civic Fk8",
-    year: "2017",
-    price: 2650000,
-    color: "Red",
-    image: "/u2.jpg",
-    status: "available",
-    type: "sports",
-  },
-  {
-    id: 4,
-    name: "Audi R8 v10",
-    year: "2018",
-    price: 11800000,
-    color: "Red",
-    image: "/u3.jpg",
+    name: "Lexus LX570 Prestige",
+    year: "2014",
+    price: 3270000,
+    color: "Black",
+    image: "/lexus-lx570.png",
     status: "available",
     type: "luxury",
   },
   {
-    id: 5,
-    name: "Lexus IS350",
-    year: "2014-15",
-    price: 1100000,
-    color: "White",
-    image: "/u4.jpg",
+    id: 4,
+    name: "Mustang GT 500",
+    year: "2013",
+    price: 3470000,
+    color: "Red",
+    image: "/mustang-gt500.png",
     status: "available",
-    type: "sedan",
+    type: "sports",
+  },
+  {
+    id: 5,
+    name: "Westfield Megabird",
+    year: "2020",
+    price: 1570000,
+    color: "Yellow",
+    image: "/westfield-megabird.png",
+    status: "available",
+    type: "sports",
   },
   {
     id: 6,
-    name: "Honda Mobilio RS",
-    year: "2023",
-    price: 680000,
-    color: "Blue",
-    image: "/u5.jpg",
+    name: "Mercedes Benz Viano (Vclass)",
+    year: "2007",
+    price: 795000,
+    color: "Silver",
+    image: "/mercedes-viano.png",
     status: "available",
     type: "mpv",
   },
   {
     id: 7,
-    name: "Toyota Vios GRS",
-    year: "2023",
-    price: 890000,
-    color: "Red",
-    image: "/u6.jpg",
+    name: "Land Cruiser Navigator Kits",
+    year: "2015",
+    price: 3170000,
+    color: "White",
+    image: "/land-cruiser-navigator.png",
+    status: "available",
+    type: "suv",
+  },
+  {
+    id: 8,
+    name: "Mercedes Benz SLK 350",
+    year: "2008",
+    price: 1470000,
+    color: "Silver",
+    image: "/mercedes-slk.png",
+    status: "available",
+    type: "luxury",
+  },
+  {
+    id: 9,
+    name: "Mercedes Benz CLA 180",
+    year: "2017",
+    price: 1270000,
+    color: "Black",
+    image: "/mercedes-cla.png",
+    status: "available",
+    type: "luxury",
+  },
+  {
+    id: 10,
+    name: "Jaguar XF",
+    year: "2010",
+    price: 770000,
+    color: "Black",
+    image: "/jaguar-xf.png",
     status: "available",
     type: "sedan",
   },
   {
-    id: 8,
-    name: "Subaru BRZ A/T",
-    year: "2015-16",
-    price: 1420000,
-    color: "Silver",
-    image: "/u7.jpg",
-    status: "available",
-    type: "sports",
-  },
-  {
-    id: 9,
-    name: "Subaru BRZ",
-    year: "2015",
-    price: 1350000,
-    color: "White",
-    transmission: "MT",
-    image: "/u8.jpg",
-    status: "available",
-    type: "sports",
-  },
-  {
-    id: 10,
-    name: "Montero GLS",
-    year: "2020",
-    price: 1280000,
-    color: "Black",
-    image: "/u9.jpg",
-    status: "available",
-    type: "suv",
-  },
-  {
     id: 11,
-    name: "Ford Mustang GT 5.0",
-    year: "2017-18",
-    price: 2180000,
-    color: "Yellow",
-    image: "/u10.jpg",
+    name: "Toyota Alphard",
+    year: "2014",
+    price: 828000,
+    color: "Silver",
+    image: "/toyota-alphard.png",
     status: "available",
-    type: "sports",
+    type: "mpv",
   },
   {
     id: 12,
-    name: "Ford Mustang GT Shelby",
-    year: "2017-18",
-    price: 2180000,
+    name: "GMC Savana",
+    year: "2017",
+    price: 1970000,
     color: "White",
-    image: "/u11.jpg",
+    image: "/gmc-savana.png",
     status: "available",
-    type: "sports",
+    type: "mpv",
   },
-  {
+  /*{
     id: 13,
-    name: "Montero GT",
-    year: "2020",
-    price: 1350000,
-    color: "White",
-    image: "/u12.jpg",
-    status: "reserved",
-    type: "suv",
-  },
-  {
-    id: 14,
-    name: "TRD 86",
-    year: "2019",
-    price: 1650000,
-    color: "Red",
-    image: "/u13.jpg",
-    status: "reserved",
-    type: "sports",
-  },
-  {
-    id: 15,
-    name: "Subaru BRZ A/T",
-    year: "2016",
-    price: 1450000,
-    color: "White",
-    image: "/u14.jpg",
-    status: "upcoming",
-    type: "sports",
-  },
+    name: "Lexus RCF",
+    year: "2015",
+    price: 3270000,
+    color: "Gray",
+    image: "/placeholder.svg?height=600&width=800",
+    status: "available",
+    type: "luxury",
+  },*/
 ];
 
 export default function InventoryPage() {
@@ -226,12 +205,11 @@ export default function InventoryPage() {
   const filterOptions = [
     { id: "all", label: "All Vehicles" },
     { id: "available", label: "Available" },
-    { id: "reserved", label: "Reserved" },
-    { id: "upcoming", label: "Upcoming" },
     { id: "luxury", label: "Luxury" },
     { id: "sports", label: "Sports" },
     { id: "sedan", label: "Sedan" },
     { id: "suv", label: "SUV" },
+    { id: "mpv", label: "MPV" },
   ];
 
   return (
@@ -242,19 +220,20 @@ export default function InventoryPage() {
       <section className="relative h-[50vh] w-full">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10" />
         <Image
-          src="/n1.jpg"
-          alt="F2A CARS Inventory"
+          src="/c1.jpg"
+          alt="Forbes Capital Cars Inventory"
           fill
           className="object-cover"
           priority
         />
         <div className="relative z-20 container mx-auto h-full flex flex-col justify-center px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl text-center md:text-5xl font-bold text-secondary mb-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Our Inventory
             </h1>
-            <p className="text-center md:text-xl text-secondary/90">
-              Browse our selection of premium quality vehicles
+            <p className="text-xl text-white/90">Looking for a new car⁉️</p>
+            <p className="text-xl font-bold text-white mt-2">
+              AVAILABLE UNITS FOR APRIL 2025
             </p>
           </div>
         </div>
@@ -262,7 +241,7 @@ export default function InventoryPage() {
 
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto text-center mb-10">
-          <h1 className="text-3xl font-bold mb-4 text-secondary">
+          <h1 className="text-3xl font-bold mb-4 text-foreground">
             Available Units
           </h1>
           <p className="text-muted-foreground">
@@ -283,7 +262,7 @@ export default function InventoryPage() {
                 className={`rounded-full ${
                   activeFilter === option.id
                     ? "bg-primary hover:bg-primary/90"
-                    : "border-silver-400 text-secondary hover:bg-accent"
+                    : "border-input text-foreground hover:bg-accent"
                 }`}
                 onClick={() => setActiveFilter(option.id)}
               >
@@ -331,7 +310,7 @@ export default function InventoryPage() {
                       className={
                         favorites.includes(car.id)
                           ? "fill-primary text-primary"
-                          : "text-secondary"
+                          : "text-foreground"
                       }
                     />
                   </button>
@@ -342,14 +321,14 @@ export default function InventoryPage() {
                 <div className="p-4">
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h3 className="font-bold text-secondary">{car.name}</h3>
+                      <h3 className="font-bold text-foreground">{car.name}</h3>
                       <p className="text-sm text-muted-foreground">
                         {car.year} • {car.color}
                       </p>
                     </div>
                   </div>
                   <div className="mt-2">
-                    <p className="text-xl font-bold text-secondary">
+                    <p className="text-xl font-bold text-foreground">
                       {formatPrice(car.price)}
                     </p>
                     <p className="text-xs text-muted-foreground">Negotiable</p>
@@ -365,7 +344,7 @@ export default function InventoryPage() {
                     <Button
                       size="sm"
                       variant="outline"
-                      className="flex-1 border-silver-400 text-secondary"
+                      className="flex-1 border-input text-foreground"
                       asChild
                     >
                       <Link href={`/car/${car.id}`}>Details</Link>

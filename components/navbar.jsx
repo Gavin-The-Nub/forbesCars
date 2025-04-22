@@ -67,24 +67,26 @@ export default function Navbar() {
               size="sm"
               className="gap-2 border-silver-400 text-secondary"
             >
-              <PhoneCall size={16} className="text-[#e32636]" />
+              <PhoneCall size={16} className="text-blue-500" />
               0915 615 3040
             </Button>
             <Button
               size="sm"
               asChild
-              className="bg-[#e32636] hover:bg-[#c01f2d] text-white"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
             >
               <Link href="/inventory">View Inventory</Link>
             </Button>
           </div>
 
-          <button
-            className="md:hidden text-secondary"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center">
+            <button
+              className="text-secondary"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -133,13 +135,13 @@ export default function Navbar() {
                 size="sm"
                 className="gap-2 justify-center border-silver-400 text-secondary"
               >
-                <PhoneCall size={16} className="text-[#e32636]" />
+                <PhoneCall size={16} className="text-blue-500" />
                 0915 615 3040
               </Button>
               <Button
                 size="sm"
                 asChild
-                className="bg-[#e32636] hover:bg-[#c01f2d] text-white"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
               >
                 <Link href="/inventory">View Inventory</Link>
               </Button>

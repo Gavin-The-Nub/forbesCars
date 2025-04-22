@@ -6,34 +6,34 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-// Featured cars data
+// Featured cars data - Updated for April 2025 with actual images
 const featuredCars = [
   {
-    id: 1,
-    name: "Nissan GTR Premium",
-    year: "2018",
-    price: 8580000,
-    color: "White",
-    image: "/c1.jpg",
-    description: "Twin-Turbo V6 Engine, 565 Horsepower, Premium Interior",
-  },
-  {
     id: 2,
-    name: "McLaren 570s",
-    year: "2020-21",
-    price: 17800000,
-    color: "Orange",
-    image: "/c2.jpg",
-    description: "3.8L Twin-Turbo V8, 562 Horsepower, Carbon Fiber Chassis",
+    name: "Audi R8 V8",
+    year: "2014",
+    price: 7500000,
+    color: "White",
+    image: "/audi-r8.png",
+    description: "Powerful V8 Engine, Premium Interior, Iconic Design",
   },
   {
     id: 3,
-    name: "Audi R8 v10",
-    year: "2018",
-    price: 11800000,
+    name: "Lexus LX570 Prestige",
+    year: "2014",
+    price: 3270000,
+    color: "Black",
+    image: "/lexus-lx570.png",
+    description: "Luxury SUV, Premium Features, Exceptional Comfort",
+  },
+  {
+    id: 4,
+    name: "Mustang GT 500",
+    year: "2013",
+    price: 3470000,
     color: "Red",
-    image: "/c3.jpg",
-    description: "5.2L V10 Engine, 532 Horsepower, Quattro All-Wheel Drive",
+    image: "/mustang-gt500.png",
+    description: "American Muscle, Powerful Engine, Iconic Design",
   },
 ];
 
@@ -85,33 +85,34 @@ export default function CarCarousel() {
             className="object-cover"
             priority={index === 0}
           />
+          {/* Update the text overlay to ensure it's readable in light mode */}
           <div className="relative z-20 container mx-auto h-full flex flex-col justify-center px-4">
             <div className="max-w-3xl">
               <span className="inline-block bg-primary text-white px-3 py-1 rounded-md text-sm mb-4">
                 Featured Vehicle
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-2">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
                 {car.name}
               </h2>
-              <p className="text-xl text-secondary/90 mb-2">
+              <p className="text-xl text-white/90 mb-2">
                 {car.year} • {car.color}
               </p>
-              <p className="text-2xl font-bold text-secondary mb-4">
+              <p className="text-2xl font-bold text-white mb-4">
                 {formatPrice(car.price)}
               </p>
-              <p className="text-secondary/80 mb-6">{car.description}</p>
+              <p className="text-white/80 mb-6">{car.description}</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
                   asChild
-                  className="bg-primary hover:bg-primary/90"
+                  className="bg-[#e32636] hover:bg-[#c01f2d] text-white"
                 >
                   <Link href={`/car/${car.id}`}>View Details</Link>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-transparent border-silver-400 text-secondary hover:bg-accent/50"
+                  className="bg-transparent border-white text-white hover:bg-white/20"
                 >
                   Inquire Now
                 </Button>
@@ -126,7 +127,7 @@ export default function CarCarousel() {
         <Button
           variant="outline"
           size="icon"
-          className="bg-black/50 border-silver-400 text-secondary hover:bg-black/70 rounded-full"
+          className="bg-black/50 border-silver-400 text-white hover:bg-black/70 rounded-full"
           onClick={() => {
             prev();
             setAutoplay(false);
@@ -137,7 +138,7 @@ export default function CarCarousel() {
         <Button
           variant="outline"
           size="icon"
-          className="bg-black/50 border-silver-400 text-secondary hover:bg-black/70 rounded-full"
+          className="bg-black/50 border-silver-400 text-white hover:bg-black/70 rounded-full"
           onClick={() => {
             next();
             setAutoplay(false);
@@ -153,7 +154,7 @@ export default function CarCarousel() {
           <button
             key={index}
             className={`w-2.5 h-2.5 rounded-full transition-all ${
-              index === current ? "bg-primary w-8" : "bg-secondary/50"
+              index === current ? "bg-primary w-8" : "bg-white/50"
             }`}
             onClick={() => {
               setCurrent(index);
