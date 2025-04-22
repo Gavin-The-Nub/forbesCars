@@ -1,0 +1,27 @@
+import { forwardRef } from "react";
+
+// Utility function to conditionally join classNames
+const cn = (...classes) => classes.filter(Boolean).join(" ");
+
+const Separator = forwardRef(
+  (
+    { className, orientation = "horizontal", decorative = true, ...props },
+    ref
+  ) => (
+    <div
+      ref={ref}
+      className={cn(
+        "shrink-0 bg-border",
+        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+        className
+      )}
+      {...props}
+      role={decorative ? "none" : "separator"}
+      aria-orientation={decorative ? undefined : orientation}
+    />
+  )
+);
+
+Separator.displayName = "Separator";
+
+export { Separator };
